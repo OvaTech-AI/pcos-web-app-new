@@ -53,7 +53,7 @@ const ImagePreview = styled.img`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const CNNModel: React.FC = () => {
+const CnnModel: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<string | null>(null);
 
@@ -95,4 +95,4 @@ const CNNModel: React.FC = () => {
   );
 };
 
-export default CNNModel;
+export default CnnModel;

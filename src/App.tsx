@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import SymptomModel from './components/SymptomModel';
-import CNNModel from './components/CnnModel';
 import About from './components/About';
 import { FaGithub } from 'react-icons/fa';
+import CnnModel from './components/CnnModel';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -71,8 +71,9 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Project />} />
+        <Route path="/pcos-web-app-new" element={<Project />} />
         <Route path="/symptom-model" element={<SymptomModel />} />
-        <Route path="/cnn-model" element={<CNNModel />} />
+        <Route path="/cnn-model" element={<CnnModel />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer>
