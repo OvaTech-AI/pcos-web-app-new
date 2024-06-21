@@ -63,7 +63,7 @@ const MemberLink = styled.a`
   color: inherit;
 `;
 
-const About: React.FC = () => {
+const Team: React.FC = () => {
   const teamMembers = [
     { name: 'Chloe', role: 'Statistics & Data Science', image: ChloeImg, linkedin: 'https://www.linkedin.com/in/chloe-zandberg/'},
     { name: 'Colleen', role: 'Computer Science & Psychology', image: ColleenImg, linkedin: 'https://www.linkedin.com/in/colleencipriano'},
@@ -113,4 +113,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Team;

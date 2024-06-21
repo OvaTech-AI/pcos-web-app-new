@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo_trans.png';
 
+const Slogan = styled.p`
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #5e3a87;
+  margin-left: 1rem;
+`;
+
 const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -10,6 +17,11 @@ const NavbarContainer = styled.nav`
   padding: 0rem 1rem;
   background-color: #93B9ED;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const LogoImage = styled.img`
@@ -39,14 +51,15 @@ const NavLink = styled.li`
 const Navbar: React.FC = () => {
   return (
     <NavbarContainer>
-      <div>
+      <LogoContainer>
         <LogoImage src={Logo} alt="OvaTech AI Logo" />
-      </div>
+        <Slogan> Empowering Women with Predictive Insights </Slogan>
+      </LogoContainer>
       <NavLinks>
         <NavLink><Link to="/">Project</Link></NavLink>
         <NavLink><Link to="/symptom-model">RF Model</Link></NavLink>
         <NavLink><Link to="/cnn-model">CNN Model</Link></NavLink>
-        <NavLink><Link to="/about">About</Link></NavLink>
+        <NavLink><Link to="/team">Members</Link></NavLink>
       </NavLinks>
     </NavbarContainer>
   );

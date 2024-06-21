@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import SymptomModel from './components/SymptomModel';
-import About from './components/About';
+import About from './components/Team';
 import { FaGithub } from 'react-icons/fa';
 import CnnModel from './components/CNNModel';
 
@@ -108,7 +108,7 @@ const App: React.FC = () => {
         <Route path="/pcos-web-app-new" element={<Project />} />
         <Route path="/symptom-model" element={<SymptomModel />} />
         <Route path="/cnn-model" element={<CnnModel />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<About />} />
       </Routes>
       <Footer>
         <FooterText>OvaTech AI</FooterText>
