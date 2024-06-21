@@ -10,6 +10,7 @@ const FormContainer = styled.div`
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
+  font-size: 1.35rem
 `;
 
 const InputField = styled.div`
@@ -79,8 +80,8 @@ const SubmitButton = styled.button`
 `;
 
 const Result = styled.div`
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
+  margin-top: 1.8rem;
+  font-size: 1.6rem;
   color: #5e3a87;
 `;
 

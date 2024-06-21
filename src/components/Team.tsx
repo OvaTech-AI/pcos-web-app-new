@@ -32,29 +32,29 @@ const MemberCard = styled.div`
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  height: 350px;
+  width: 275px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 const MemberPhoto = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: -0.5rem;
 `;
 
 const MemberName = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   color: #5e3a87;
   margin-bottom: 0.5rem;
 `;
 
 const MemberRole = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
 `;
 
