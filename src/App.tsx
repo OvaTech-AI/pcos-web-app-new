@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import SymptomModel from './components/SymptomModel';
+import CnnModel from './components/CNNModel';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -37,6 +38,7 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/symptom-model" element={<SymptomModel />} />
+        <Route path="/cnn-model" element={<CnnModel />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>
