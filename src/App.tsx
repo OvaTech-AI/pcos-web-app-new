@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import SymptomModel from './components/SymptomModel';
-import CnnModel from './components/CNNModel';
+import CNNModel from './components/CnnModel';
+import About from './components/About';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -16,11 +17,11 @@ const AppHeader = styled.header`
 `;
 
 const AppTitle = styled.h1`
-  font-size: 3.2rem;
+  font-size: 4rem;
 `;
 
 const AppDescription = styled.p`
-  font-size: 1.5rem;
+  font-size: 2rem;
 `;
 
 const Home = () => (
@@ -38,7 +39,8 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/symptom-model" element={<SymptomModel />} />
-        <Route path="/cnn-model" element={<CnnModel />} />
+        <Route path="/cnn-model" element={<CNNModel />} />
+        <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>

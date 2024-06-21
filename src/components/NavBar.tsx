@@ -13,17 +13,17 @@ const NavbarContainer = styled.nav`
 `;
 
 const LogoImage = styled.img`
-  height: 100px;
+  height: 150px;
 `;
 
 const NavLinks = styled.ul`
   list-style: none;
   display: flex;
-  font-size: 1.7rem;
+  font-size: 2.4rem;
 `;
 
 const NavLink = styled.li`
-  margin: 0 1.5rem;
+  margin: 0 3rem;
 
   a {
     text-decoration: none;
