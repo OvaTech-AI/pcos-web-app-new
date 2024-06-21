@@ -3,29 +3,32 @@ import styled from 'styled-components';
 import { Client } from '@gradio/client';
 
 const FormContainer = styled.div`
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const InputField = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 `;
 
 const Label = styled.label`
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
+  color: #5e3a87;
+  font-size: 2rem;
 `;
 
 const FileInput = styled.input`
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 2rem;
+  border: 3px solid #5e3a87;
+  border-radius: 5px;
+  width: 735px
 `;
 
 const SubmitButton = styled.button`
@@ -42,8 +45,9 @@ const SubmitButton = styled.button`
 `;
 
 const Result = styled.div`
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #5e3a87;
 `;
 
 const ImagePreview = styled.img`
@@ -87,9 +91,16 @@ const CnnModel: React.FC = () => {
           <Label htmlFor="file">Upload Ultrasound Image</Label>
           <FileInput type="file" id="file" name="file" onChange={handleFileChange} required />
         </InputField>
-        {file && <ImagePreview src={URL.createObjectURL(file)} alt="Uploaded Image" />}
-        <SubmitButton type="submit">Submit</SubmitButton>
+        {file && (
+          <div>
+            <ImagePreview src={URL.createObjectURL(file)} alt="Uploaded Image" />
+          </div>
+        )}
+        <div style={{ marginTop: '20px' }}>
+          <SubmitButton type="submit">Submit</SubmitButton>
+        </div>
       </form>
+      <p>---------------</p>
       {result && <Result>{result}</Result>}
     </FormContainer>
   );

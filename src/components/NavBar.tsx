@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/logo_trans.png';
 
 const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #a0d8ef;
+  padding: 0rem 1rem;
+  background-color: #93B9ED;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const LogoImage = styled.img`
-  height: 150px;
+  height: 170px;
 `;
 
 const NavLinks = styled.ul`
   list-style: none;
   display: flex;
-  font-size: 2.4rem;
+  font-size: 2.0rem;
 `;
 
 const NavLink = styled.li`
-  margin: 0 3rem;
+  margin: 0 2rem;
 
   a {
     text-decoration: none;
@@ -31,7 +31,7 @@ const NavLink = styled.li`
     font-weight: bold;
 
     &:hover {
-      color: #ff94c2;
+      color: #E8C1CA;
     }
   }
 `;
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
       </div>
       <NavLinks>
         <NavLink><Link to="/">Project</Link></NavLink>
-        <NavLink><Link to="/symptom-model">Symptom Model</Link></NavLink>
+        <NavLink><Link to="/symptom-model">RF Model</Link></NavLink>
         <NavLink><Link to="/cnn-model">CNN Model</Link></NavLink>
         <NavLink><Link to="/about">About</Link></NavLink>
       </NavLinks>

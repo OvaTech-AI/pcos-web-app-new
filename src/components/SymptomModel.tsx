@@ -5,14 +5,15 @@ import { Client } from '@gradio/client';
 const FormContainer = styled.div`
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 `;
 
 const InputField = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 const Label = styled.label`
@@ -78,9 +79,23 @@ const SubmitButton = styled.button`
 `;
 
 const Result = styled.div`
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #5e3a87;
 `;
+
+const getLabel = (key: string) => {
+  if (key === 'weight') {
+    return 'WEIGHT in KG';
+
+  } else if (key === 'height') {
+    return 'HEIGHT in CM';
+    
+  } else {
+    // Add more conditions for other keys if needed
+    return key.replace('_', ' ').toUpperCase(); // Default to uppercase with underscores replaced by spaces
+  }
+};
 
 type FormDataKey = 'age' | 'weight' | 'height' | 'bmi' | 'fast_food' | 'exercise' | 'pregnant' | 'skin_darkening' | 'hair_growth' | 'weight_gain' | 'pimples' | 'hair_loss' | 'abortions' | 'cycle_length';
 
@@ -153,7 +168,7 @@ const SymptomModel: React.FC = () => {
       <form onSubmit={handleSubmit}>
         {Object.keys(formData).map((key) => (
           <InputField key={key}>
-            <Label htmlFor={key}>{key.replace('_', ' ').toUpperCase()}</Label>
+            <Label htmlFor={key}>{getLabel(key)}</Label>
             {key === 'fast_food' || key === 'exercise' || key === 'pregnant' || key === 'skin_darkening' || key === 'hair_growth' || key === 'weight_gain' || key === 'pimples' || key === 'hair_loss' ? (
               <RadioGroup>
                 <div>
@@ -191,6 +206,7 @@ const SymptomModel: React.FC = () => {
         ))}
         <SubmitButton type="submit">Submit</SubmitButton>
       </form>
+      <p>---------------</p>
       {result && <Result>{result}</Result>}
     </FormContainer>
   );

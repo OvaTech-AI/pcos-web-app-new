@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ChloeImg from '../assets/Logo.png';
+import ChloeImg from '../assets/Logo.png';  //to change to chloe's image
 import ColleenImg from '../assets/colleen.png';
 import ErikaImg from '../assets/erika.png';
 import FrancesImg from '../assets/frances.png';
@@ -14,7 +14,7 @@ const TeamContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #5e3a87;
   margin-bottom: 2rem;
 `;
@@ -22,7 +22,7 @@ const Title = styled.h1`
 const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1rem;
   justify-items: center;
   margin-bottom: 2rem;
 `;
@@ -30,9 +30,10 @@ const TeamGrid = styled.div`
 const MemberCard = styled.div`
   background-color: #ffffff;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 250px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,13 +48,13 @@ const MemberPhoto = styled.img`
 `;
 
 const MemberName = styled.h3`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #5e3a87;
   margin-bottom: 0.5rem;
 `;
 
 const MemberRole = styled.p`
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #333;
 `;
 
@@ -64,12 +65,12 @@ const MemberLink = styled.a`
 
 const About: React.FC = () => {
   const teamMembers = [
-    { name: 'Chloe', role: 'Statistics & Data Science', image: ChloeImg },
-    { name: 'Colleen', role: 'Computer Science & Psychology', image: ColleenImg },
-    { name: 'Erika', role: 'Computer Science', image: ErikaImg, linkedin: 'https://www.linkedin.com/in/erikatian/' },
-    { name: 'Frances', role: 'Computer Science', image: FrancesImg },
-    { name: 'Nataniella', role: 'Computer Science & Psychology', image: NataniellaImg },
-    { name: 'Sharon', role: 'Computer Science', image: SharonImg },
+    { name: 'Chloe', role: 'Statistics & Data Science', image: ChloeImg, linkedin: 'https://www.linkedin.com/in/chloe-zandberg/'},
+    { name: 'Colleen', role: 'Computer Science & Psychology', image: ColleenImg, linkedin: 'https://www.linkedin.com/in/colleencipriano'},
+    { name: 'Erika', role: 'Computer Science', image: ErikaImg, linkedin: 'https://www.linkedin.com/in/erikatian/'},
+    { name: 'Frances', role: 'Computer Science', image: FrancesImg, linkedin: 'https://www.linkedin.com/in/frances-i-384014229/'},  
+    { name: 'Nataniella', role: 'Computer Science & Psychology', image: NataniellaImg, linkedin: 'https://www.linkedin.com/in/nataniella-ogogo'},
+    { name: 'Sharon', role: 'Computer Science', image: SharonImg, linkedin: 'https://www.linkedin.com/in/sharon-musa-8832a11a6/'},
   ];
 
   return (
