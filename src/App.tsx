@@ -5,6 +5,7 @@ import Navbar from './components/NavBar';
 import SymptomModel from './components/SymptomModel';
 import CNNModel from './components/CnnModel';
 import About from './components/About';
+import { FaGithub } from 'react-icons/fa';
 
 const AppContainer = styled.div`
   text-align: center;
@@ -22,6 +23,30 @@ const AppTitle = styled.h1`
 
 const AppDescription = styled.p`
   font-size: 2rem;
+`;
+
+const Footer = styled.footer`
+  background-color: #5e3a87;
+  color: #ffffff;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+`;
+
+const FooterText = styled.span`
+  margin-right: 1rem;
+  font-size: 1.5rem;
+`;
+
+const FooterLink = styled.a`
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Home = () => (
@@ -43,6 +68,12 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer>
+        <FooterText>OvaTech AI</FooterText>
+        <FooterLink href="https://github.com/OvaTech-AI" target="_blank">
+          <FaGithub size={32} />
+        </FooterLink>
+      </Footer>
     </Router>
   );
 }
