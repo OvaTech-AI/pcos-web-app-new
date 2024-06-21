@@ -57,11 +57,16 @@ const MemberRole = styled.p`
   color: #333;
 `;
 
+const MemberLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const About: React.FC = () => {
   const teamMembers = [
     { name: 'Chloe', role: 'Statistics & Data Science', image: ChloeImg },
     { name: 'Colleen', role: 'Computer Science & Psychology', image: ColleenImg },
-    { name: 'Erika', role: 'Computer Science', image: ErikaImg },
+    { name: 'Erika', role: 'Computer Science', image: ErikaImg, linkedin: 'https://www.linkedin.com/in/erikatian/' },
     { name: 'Frances', role: 'Computer Science', image: FrancesImg },
     { name: 'Nataniella', role: 'Computer Science & Psychology', image: NataniellaImg },
     { name: 'Sharon', role: 'Computer Science', image: SharonImg },
@@ -73,27 +78,33 @@ const About: React.FC = () => {
       <TeamGrid>
         {teamMembers.slice(0, 3).map((member) => (
           <MemberCard key={member.name}>
-            <MemberPhoto src={member.image} alt={member.name} />
-            <MemberName>{member.name}</MemberName>
-            <MemberRole>{member.role}</MemberRole>
+            <MemberLink href={member.linkedin || '#'} target="_blank">
+              <MemberPhoto src={member.image} alt={member.name} />
+              <MemberName>{member.name}</MemberName>
+              <MemberRole>{member.role}</MemberRole>
+            </MemberLink>
           </MemberCard>
         ))}
       </TeamGrid>
       <TeamGrid>
         {teamMembers.slice(3, 6).map((member) => (
           <MemberCard key={member.name}>
-            <MemberPhoto src={member.image} alt={member.name} />
-            <MemberName>{member.name}</MemberName>
-            <MemberRole>{member.role}</MemberRole>
+            <MemberLink href={member.linkedin || '#'} target="_blank">
+              <MemberPhoto src={member.image} alt={member.name} />
+              <MemberName>{member.name}</MemberName>
+              <MemberRole>{member.role}</MemberRole>
+            </MemberLink>
           </MemberCard>
         ))}
       </TeamGrid>
       <TeamGrid>
         {teamMembers.slice(6).map((member) => (
           <MemberCard key={member.name}>
-            <MemberPhoto src={member.image} alt={member.name} />
-            <MemberName>{member.name}</MemberName>
-            <MemberRole>{member.role}</MemberRole>
+            <MemberLink href={member.linkedin || '#'} target="_blank">
+              <MemberPhoto src={member.image} alt={member.name} />
+              <MemberName>{member.name}</MemberName>
+              <MemberRole>{member.role}</MemberRole>
+            </MemberLink>
           </MemberCard>
         ))}
       </TeamGrid>
