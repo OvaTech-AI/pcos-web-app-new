@@ -49,12 +49,19 @@ const FooterLink = styled.a`
   }
 `;
 
-const Home = () => (
+const Project = () => (
   <AppContainer>
     <AppHeader>
       <AppTitle>Welcome to OvaTech AI</AppTitle>
       <AppDescription>Your PCOS diagnostic and monitoring tool.</AppDescription>
     </AppHeader>
+    <iframe
+      style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+      width="800"
+      height="450"
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fik5hU8F2rmyUMe4ZKssabz%2FOvaTech-AI-Interface%3Fnode-id%3D1-2%26t%3DZDd2h0yoyi9eqJrR-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A2"
+      allowFullScreen
+    ></iframe>
   </AppContainer>
 );
 
@@ -63,10 +70,10 @@ const App: React.FC = () => {
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Project />} />
         <Route path="/symptom-model" element={<SymptomModel />} />
         <Route path="/cnn-model" element={<CNNModel />} />
         <Route path="/about" element={<About />} />
-        <Route path="/" element={<Home />} />
       </Routes>
       <Footer>
         <FooterText>OvaTech AI</FooterText>
