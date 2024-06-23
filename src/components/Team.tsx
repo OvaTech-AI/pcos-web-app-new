@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ChloeImg from '../assets/Logo.png';  //to change to chloe's image
+import ChloeImg from '../assets/chloe.png';
 import ColleenImg from '../assets/colleen.png';
 import ErikaImg from '../assets/erika.png';
 import FrancesImg from '../assets/frances.png';
