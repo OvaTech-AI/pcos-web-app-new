@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://OvaTech-AI.github.io/pcos-web-app-new",
+  "homepage": "https://ovatech-ai.github.io/pcos-web-app-new/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
